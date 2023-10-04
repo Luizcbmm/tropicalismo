@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <style>
+        /* Estilo para o texto acima da imagem */
+      /* Estilos para a div com classe "overlay" */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px; /* Adicione esta margem para ajustar o espaço entre o cabeçalho e o conteúdo */
+}
+
+/* Estilo para o texto acima da imagem */
+#content p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 20px;
+    color: #333;
+}
+
+/* Estilos para a imagem do banner */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura da tela */
+    height: auto;
+}
+
+    </style>
+    <script src="./script.js"></script>
+    <title>Exposição de Arte do Tropicalismo</title>
+</head>
+
+<body>
+    <header>
+        <h1>Exposição de Arte do Tropicalismo</h1>
+        <h2>Descubra o movimento cultural que revolucionou a música e a arte no Brasil.</h2>
+        <a class="button" href="javascript:void(0);" onclick="mostrarOpcoes()">Saiba Mais</a>
+    </header>
+
+    <div id="opcoes" class="didi">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="musicas.html">Músicas</a></li>
+                <li><a href="historias.html">História</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="overlay">
+        <section id="content">
+            <!-- O conteúdo das páginas será carregado aqui -->
+            <p>Bem-vindo ao Site da Exposição de Arte do Tropicalismo. Este é o portal oficial da Exposição de Arte do
+                Tropicalismo, onde você pode explorar o incrível movimento cultural que revolucionou a música e a arte
+                no Brasil nas décadas de 1960 e 1970. Nossa exposição online é uma homenagem a esse período marcante da
+                história brasileira, oferecendo uma jornada única pelos aspectos artísticos e históricos do
+                Tropicalismo.</p>
+            <p>O que Você Encontrará Aqui:</p>
+            <p> 1- Início: Comece sua jornada pelo Tropicalismo aprendendo sobre o contexto histórico e as raízes do
+                movimento. Descubra como surgiu e como se espalhou, influenciando a cultura brasileira.</p>
+
+                <p> 2- Músicas: Explore a rica e diversificada cena musical do Tropicalismo. Conheça os artistas icônicos e as
+                canções que deram vida a esse movimento musical revolucionário. Além disso, desfrute de amostras das
+                músicas diretamente em nosso site.</p>
+
+                <p> 3- História: Aprofunde-se na história do Tropicalismo por meio de relatos detalhados, fotografias
+                memoráveis e informações sobre os principais protagonistas desse movimento.</p>
+
+                <p> 4- Saiba Mais: Se você quiser se aprofundar ainda mais no mundo do Tropicalismo, nosso link "Saiba Mais" o
+                levará a recursos adicionais, incluindo livros, documentários e muito mais.</p>
+
+                <p>Por que o Tropicalismo Importa:</p>
+
+                <p> O Tropicalismo não apenas redefiniu a música e a arte no Brasil, mas também teve um impacto duradouro na cultura global. Suas influências ainda podem ser vistas e ouvidas na música e nas artes contemporâneas. Navegue por nosso site para descobrir como esse movimento desafiou normas culturais, políticas e sociais, abrindo novos caminhos para a criatividade e a expressão artística.</p>
+
+                <p>Desfrute da Exposição:</p>
+
+                <p>Convidamos você a explorar nossa exposição online e mergulhar na rica história do Tropicalismo. Este site é uma celebração do legado duradouro deste movimento revolucionário. Sinta-se à vontade para navegar pelas seções, ouvir as músicas e aprender mais sobre as figuras notáveis ​​que moldaram o Tropicalismo.</p>
+                    
+                <p>A Exposição de Arte do Tropicalismo é uma homenagem à criatividade, à inovação e à paixão que impulsionaram essa revolução cultural. Esperamos que você aproveite a visita e se inspire na energia vibrante do Tropicalismo.</p>
+            <!-- Restante do texto continua aqui -->
+
+        </section>
+        <img src="./assets/images/tropi.jpg" alt="Capa do álbum 2">
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Exposição de Arte do Tropicalismo</p>
+    </footer>
+
+    <script>
+        function mostrarOpcoes() {
+            const opcoes = document.getElementById("opcoes");
+            const menu = document.getElementById("menu");
+
+            if (opcoes.style.display === "none") {
+                opcoes.style.display = "block";
+                menu.style.display = "block";
+            } else {
+                opcoes.style.display = "none";
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

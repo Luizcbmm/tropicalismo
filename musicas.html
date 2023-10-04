@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/music.css">
+    <style>
+        /* Estilo para a barra de pesquisa */
+        .search-bar {
+            position:absolute;
+            top: 0;
+            left: 50%;
+            /* Coloca a barra no centro horizontal */
+            transform: translateX(-50%);
+            /* Move a barra para o centro horizontal */
+            width: 40%;
+            /* Reduzindo a largura da barra de pesquisa */
+            
+            /* Cor de fundo da barra de pesquisa */
+            padding: 10px;
+            z-index: 1;
+            /* Para garantir que a barra de pesquisa fique acima do conteúdo */
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Estilos para o conteúdo das músicas */
+        .overlay {
+            padding-top: 40px;
+            /* Para evitar que o conteúdo seja obscurecido pela barra de pesquisa */
+        }
+
+        .musica {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Centraliza as músicas horizontalmente */
+            align-items: center;
+        }
+
+        .musica>div {
+            flex-basis: calc(33.33% - 20px);
+            /* 33.33% para três colunas e 20px de espaçamento entre elas */
+            margin-right: 20px;
+            /* Espaçamento entre as colunas */
+            margin-bottom: 20px;
+            /* Espaçamento entre as fileiras */
+            cursor: pointer;
+            /* Adicione cursor de mão para indicar que a imagem é clicável */
+        }
+
+        .musica>div:last-child {
+            margin-right: 0;
+            /* Remover espaçamento à direita para a última coluna na fileira */
+        }
+    </style>
+    <title>Musicas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Exposição das musicas do Tropicalismo</h1>
+        <p>Bem-vindo à página de músicas, procure sua musica da tropicalia acima</p>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="search-box" class="search-box" placeholder="Pesquisar músicas...">
+    </div>
+    <div class="overlay">
+        
+        <!-- Coloque aqui o conteúdo adicional que você deseja sobrepor -->
+
+        <div class="musica" id="musica-container">
+            <!-- Adicione as informações das músicas aqui -->
+            <div data-audio="./assets/audio/geleia geral.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/geleia.png" alt="Capa do álbum 1">
+                <p>Geleia Geral</p>
+            </div>
+
+            <div data-audio="./assets/audio/chuva de prata.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/chuva de.jpg" alt="Capa do álbum 2">
+                <p>Chuva de Prata</p>
+            </div>
+
+            <div data-audio="./assets/audio/nada mais.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/nada.jpg" alt="Capa do álbum 2">
+                <p>Nada Mais</p>
+            </div>
+
+            <div data-audio="./assets/audio/pedaço de mim.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/Pedaço_de_Mim.jpg" alt="Capa do álbum 2">
+                <p>Pedaço de Mim</p>
+            </div>
+
+            <div data-audio="./assets/audio/tempo rei.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/rei.png" alt="Capa do álbum 2">
+                <p>Tempo Rei</p>
+            </div>
+
+            <div data-audio="./assets/audio/pra você.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Pra você</p>
+            </div>
+
+            <div data-audio="./assets/audio/eternamente.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Eternamente</p>
+            </div>
+
+            <div data-audio="./assets/audio/esquadros.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Esquadros</p>
+            </div>
+
+            <div data-audio="./assets/audio/baby.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Baby</p>
+            </div>
+
+            <div data-audio="./assets/audio/vapor barato.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Vapor Barato</p>
+            </div>
+
+            <div data-audio="./assets/audio/sua estupidez.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Sua Estupidez</p>
+            </div>
+
+            <div data-audio="./assets/audio/quando.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Quando</p>
+            </div>
+
+            <div data-audio="./assets/audio/folhetim.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Folhetim</p>
+            </div>
+
+            <div data-audio="./assets/audio/wave,mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Wave</p>
+            </div>
+
+            <div data-audio="./assets/audio/corcovado.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Corcovado</p>
+            </div>
+
+            <div data-audio="./assets/audio/ruas de outono.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Ruas de Outono</p>
+            </div>
+
+            <div data-audio="./assets/audio/pout pourri.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Pout-pourri</p>
+            </div>
+
+            <div data-audio="./assets/audio/esotérico.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Esotérico</p>
+            </div>
+
+            <div data-audio="./assets/audio/olhos do coração.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Olhos do coração</p>
+            </div>
+
+            <div data-audio="./assets/audio/pérola negra.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Pérola negra</p>
+            </div>
+
+            <div data-audio="./assets/audio/você.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Você</p>
+            </div>
+
+            <div data-audio="./assets/audio/tigresa.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Tigresa</p>
+            </div>
+
+            <div data-audio="./assets/audio/chega de mágoa.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Chega de Mágoa</p>
+            </div>
+
+            <div data-audio="./assets/audio/bem me quer.mp3" onclick="toggleAudio(this)">
+                <img src="./assets/images/voc.png" alt="Capa do álbum 2">
+                <p>Bem me quer</p>
+            </div>
+            <!-- Adicione mais músicas aqui -->
+        </div>
+    </div>
+
+    <script>
+        const musicaContainer = document.getElementById("musica-container");
+        const searchBox = document.getElementById("search-box");
+        let audioElement = null; // Elemento de áudio global
+
+        // Função para mostrar/ocultar músicas com base na pesquisa
+        function filtrarMusicas() {
+            const termoPesquisa = searchBox.value.toLowerCase();
+
+            const musicas = Array.from(musicaContainer.querySelectorAll(".musica div"));
+
+            musicas.forEach((musica) => {
+                const nomeMusica = musica.querySelector("p").textContent.toLowerCase();
+                const mostraMusica = nomeMusica.includes(termoPesquisa);
+                musica.style.display = mostraMusica ? "block" : "none";
+            });
+        }
+
+        // Função para tocar ou pausar o áudio quando a imagem for clicada
+        function toggleAudio(element) {
+            const audioSrc = element.getAttribute("data-audio");
+            if (audioElement) {
+                if (audioElement.src === audioSrc && !audioElement.paused) {
+                    // A música atualmente tocando é a mesma da imagem clicada e não está pausada, então pause-a.
+                    audioElement.pause();
+                    audioElement = null;
+                    return;
+                } else {
+                    // A música atualmente tocando é diferente da imagem clicada ou está pausada, então pare-a e crie um novo elemento de áudio.
+                    audioElement.pause();
+                    audioElement = null;
+                }
+            }
+
+            audioElement = new Audio(audioSrc);
+            audioElement.play();
+        }
+
+        // Chame a função para filtrar músicas quando o usuário digitar na barra de pesquisa
+        searchBox.addEventListener("input", filtrarMusicas);
+    </script>
+</body>
+
+</html>
